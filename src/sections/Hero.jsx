@@ -41,6 +41,12 @@ const Hero = () => {
               <h1>into Real Projects</h1>
               <h1>that Deliver Results</h1>
             </div>
+            <p className="text-gray-400">
+  Hi, I'm <span className="text-white font-semibold">Mohsina Alima</span>, a
+  passionate developer learning and building modern web experiences.
+</p>
+
+
 
             {/* Words Section */}
             <div className='flex gap-6 mt-6'>
