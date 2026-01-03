@@ -51,7 +51,8 @@ const Hero = () => {
             <Button
               id="button"
               text="See my work"
-              className="md:w-40 md:h-16 w-60 h-12"
+              className="md:w-30
+               md:h-16 w-60 h-12"
             />
 
             <div className="flex gap-6 mt-6">
