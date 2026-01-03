@@ -45,8 +45,10 @@ const Hero = () => {
   Hi, I'm <span className="text-white font-semibold">Mohsina Alima</span>, a
   passionate developer learning and building modern web experiences.
 </p>
-<button>
-  
+<button className="md:w-80 md:h-16 w-60 h-12">
+  id="button"
+  text="See my work"
+
 </button>
 
 
