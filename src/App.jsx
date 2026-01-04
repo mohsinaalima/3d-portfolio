@@ -1,21 +1,27 @@
-import { Canvas } from "@react-three/fiber";
-import { OrbitControls, useGLTF } from "@react-three/drei";
+import Testimonials from "./sections/Testimonials";
+import Footer from "./sections/Footer";
+import Contact from "./sections/Contact";
+import TechStack from "./sections/TechStack";
+import Experience from "./sections/Experience";
+import Hero from "./sections/Hero";
+import ShowcaseSection from "./sections/ShowcaseSection";
+import LogoShowcase from "./sections/LogoShowcase";
+import FeatureCards from "./sections/FeatureCards";
+import Navbar from "./components/NavBar";
 
-function Room() {
-  const { scene } = useGLTF("/models/optimized-room.glb");
-  return <primitive object={scene} scale={2.5} />;
-}
+const App = () => (
+  <>
+    <Navbar />
+    <Hero />
+    <ShowcaseSection />
+    <LogoShowcase />
+    <FeatureCards />
+    <Experience />
+    <TechStack />
+    <Testimonials />
+    <Contact />
+    <Footer />
+  </>
+);
 
-export default function App() {
-  return (
-    <Canvas
-      camera={{ position: [0, 6, 12] }}
-      style={{ height: "100vh", width: "100vw" }}
-    >
-      <ambientLight intensity={2} />
-      <directionalLight position={[5, 5, 5]} />
-      <Room />
-      <OrbitControls />
-    </Canvas>
-  );
-}
+export default App;
