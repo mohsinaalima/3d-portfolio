@@ -4,8 +4,10 @@ import gsap from "gsap";
 import TitleHeader from "../components/TitleHeader";
 
 import { techStackIcons } from "../constants";
+import ContactExperience from "../components/Modals/contact/ContactExperience";
 
-import TechIconCardExperience from "../components/modals/tech_logos/TechIconCardExperience.jsx";
+import TechIconCardExperience from "../components/Modals/tech_logos/TechIconCardExperience";
+
 
 const TechStack = () => {
   useGSAP(() => {
