@@ -1,4 +1,4 @@
-import { useGLTF } from "@react-three/drei";
+import Computer from "../models/shared/Computer";
 
 export function Computer(props) {
   const { nodes, materials } = useGLTF(
