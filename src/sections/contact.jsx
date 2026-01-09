@@ -2,7 +2,7 @@ import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
 import TitleHeader from "../components/TitleHeader";
-import ContactExperience from "../components/Modals/contact/ContactExperience";
+import ContactExperience from "../components/models/contact";
 
 const Contact = () => {
   const formRef = useRef(null);
@@ -15,7 +15,7 @@ const Contact = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setForm({ ...form, [name]: value });
+    setForm((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = async (e) => {
@@ -31,8 +31,10 @@ const Contact = () => {
       );
 
       setForm({ name: "", email: "", message: "" });
+      alert("Message sent successfully 🚀");
     } catch (error) {
       console.error("EmailJS Error:", error);
+      alert("Something went wrong. Please try again.");
     } finally {
       setLoading(false);
     }
@@ -45,7 +47,9 @@ const Contact = () => {
           title='Get in Touch – Let’s Connect'
           sub='💬 Have questions or ideas? Let’s talk! 🚀'
         />
+
         <div className='grid-12-cols mt-16'>
+          {/* LEFT: FORM */}
           <div className='xl:col-span-5'>
             <div className='flex-center card-border rounded-xl p-10'>
               <form
@@ -92,7 +96,7 @@ const Contact = () => {
                   />
                 </div>
 
-                <button type='submit'>
+                <button type='submit' disabled={loading}>
                   <div className='cta-button group'>
                     <div className='bg-circle' />
                     <p className='text'>
@@ -106,8 +110,10 @@ const Contact = () => {
               </form>
             </div>
           </div>
+
+          {/* RIGHT: 3D EXPERIENCE */}
           <div className='xl:col-span-7 min-h-96'>
-            <div className='bg-[#cd7c2e] w-full h-full hover:cursor-grab rounded-3xl overflow-hidden'>
+            <div className='bg-[#cd7c2e] w-full h-full rounded-3xl overflow-hidden hover:cursor-grab'>
               <ContactExperience />
             </div>
           </div>

@@ -1,4 +1,4 @@
-import { Suspense } from "react";
+
 
 <Canvas shadows camera={{ position: [0, 3, 7], fov: 45 }}>
   <ambientLight intensity={0.5} color='#fff4e6' />
@@ -24,3 +24,5 @@ import { Suspense } from "react";
     </group>
   </Suspense>
 </Canvas>;
+
+export default ContactExperience;

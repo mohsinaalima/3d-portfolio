@@ -1,7 +1,7 @@
 import { Environment, Float, OrbitControls, useGLTF } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { useEffect } from "react";
-import * as THREE from "three";
+import TechIconCardExperience from "../components/models/tech_logos";
 
 const TechIconCardExperience = ({ model }) => {
   const scene = useGLTF(model.modelPath);
