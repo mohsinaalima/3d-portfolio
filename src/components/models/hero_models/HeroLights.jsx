@@ -1,4 +1,7 @@
-import * as THREE from "three";
+import { RectAreaLightUniformsLib } from "three/examples/jsm/lights/RectAreaLightUniformsLib";
+
+RectAreaLightUniformsLib.init();
+
 
 const HeroLights = () => (
   <>
