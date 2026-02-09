@@ -111,7 +111,7 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* RIGHT: 3D EXPERIENCE */}
+          
           <div className='xl:col-span-7 min-h-96'>
             <div className='bg-[#cd7c2e] w-full h-full rounded-3xl overflow-hidden hover:cursor-grab'>
               <ContactExperience />

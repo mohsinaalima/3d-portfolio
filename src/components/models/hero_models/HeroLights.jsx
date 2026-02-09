@@ -7,7 +7,7 @@ RectAreaLightUniformsLib.init();
 const HeroLights = () => (
   <>
  
-    <spotLight
+    <spotLight 
       position={[2, 5, 6]}
       angle={0.15}
       penumbra={0.2}
