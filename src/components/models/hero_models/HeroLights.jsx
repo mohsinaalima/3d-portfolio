@@ -1,4 +1,5 @@
 import { RectAreaLightUniformsLib } from "three/examples/jsm/lights/RectAreaLightUniformsLib";
+import * as THREE from 'three';
 
 RectAreaLightUniformsLib.init();
 
