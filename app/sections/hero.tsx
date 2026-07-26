@@ -13,10 +13,16 @@ const container = {
   show: { transition: { staggerChildren: 0.07, delayChildren: 0.05 } },
 };
 
-
 const item = {
-  hidden: { opacity: 0, y: 14 },
-  show: { opacity: 1, y: 0 },
+  hidden: { opacity: 0, y: 20 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: [0.25, 0.1, 0.25, 1] as const,
+    },
+  },
 };
 
 export function Hero() {
@@ -53,7 +59,6 @@ export function Hero() {
       >
         <motion.h1
           variants={item}
-          
           transition={{ duration: 0.6, ease: "easeInOut" }}
           className='text-[clamp(3.25rem,7.5vw,6rem)] font-normal leading-[0.98] tracking-tight text-text-primary'
         >
@@ -68,7 +73,6 @@ export function Hero() {
       <motion.div
         initial={{ opacity: 0, scale: 0.96 }}
         animate={{ opacity: 1, scale: 1 }}
-        // Simple string ease
         transition={{ duration: 0.5, ease: "easeInOut" }}
         className='block'
       >
