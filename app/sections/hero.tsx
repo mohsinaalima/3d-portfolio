@@ -13,8 +13,7 @@ const container = {
   show: { transition: { staggerChildren: 0.07, delayChildren: 0.05 } },
 };
 
-// 1. SIMPLEST POSSIBLE VARIANTS
-// No transition object here. This cannot fail type checking.
+
 const item = {
   hidden: { opacity: 0, y: 14 },
   show: { opacity: 1, y: 0 },
@@ -54,7 +53,7 @@ export function Hero() {
       >
         <motion.h1
           variants={item}
-          // 2. Transition moved here using a simple string ease
+          
           transition={{ duration: 0.6, ease: "easeInOut" }}
           className='text-[clamp(3.25rem,7.5vw,6rem)] font-normal leading-[0.98] tracking-tight text-text-primary'
         >
