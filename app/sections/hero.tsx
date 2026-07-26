@@ -6,8 +6,11 @@ import {
   useSpring,
   useReducedMotion,
   type Variants,
+  type Easing,
 } from "framer-motion";
 import { PortraitFrame } from "@/app/components/portrait-frame";
+
+const easeOut: Easing = [0.25, 0.1, 0.25, 1];
 
 const container: Variants = {
   hidden: {},
@@ -21,7 +24,7 @@ const item: Variants = {
     y: 0,
     transition: {
       duration: 0.6,
-      ease: [0.25, 0.1, 0.25, 1],
+      ease: easeOut,
     },
   },
 };
